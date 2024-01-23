@@ -1,4 +1,4 @@
-package com.example.springlabjpa;
+package com.example.springlabjpa.correlation;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

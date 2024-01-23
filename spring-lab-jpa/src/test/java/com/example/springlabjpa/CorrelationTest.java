@@ -4,8 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.springlabjpa.correlation.Player;
+import com.example.springlabjpa.correlation.PlayerRepository;
+import com.example.springlabjpa.correlation.Team;
+import com.example.springlabjpa.correlation.TeamRepository;
+
 @SpringBootTest
-public class RelationshipTest {
+public class CorrelationTest {
 
 	@Autowired
 	TeamRepository teamRepository;

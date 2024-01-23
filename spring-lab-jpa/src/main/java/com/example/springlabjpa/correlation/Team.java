@@ -1,7 +1,9 @@
-package com.example.springlabjpa;
+package com.example.springlabjpa.correlation;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import com.example.springlabjpa.correlation.Player;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,7 +25,7 @@ public class Team {
 
 	private String name;
 
-	@OneToMany
+	@OneToMany(mappedBy = "team")
 	private Set<Player> players = new HashSet<>();
 
 	public void add(Player player){

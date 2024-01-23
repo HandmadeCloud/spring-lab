@@ -1,4 +1,4 @@
-package com.example.springlabjpa;
+package com.example.springlabjpa.correlation;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
