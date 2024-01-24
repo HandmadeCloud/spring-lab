@@ -1,5 +1,8 @@
 package com.example.springlabjpa;
 
+import static org.assertj.core.api.Assertions.*;
+
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,9 +33,6 @@ public class CorrelationTest {
 		team.add(player);
 
 		playerRepository.save(player);
-
-		System.out.println(team.getPlayers());
-		System.out.println(player.getTeam());
-
+		assertThat(team.getPlayers()).isNotNull();
 	}
 }
