@@ -17,7 +17,7 @@ import lombok.ToString;
 @Entity
 @Getter
 @Table(name="basketball_players")
-public class BasketballPlayer implements Serializable {
+public class BasketballPlayer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class BasketballPlayer implements Serializable {
 	private String name;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(referencedColumnName = "name")
+	@JoinColumn(name = "id")
 	private BasketballTeam team;
 
 	protected BasketballPlayer(){
