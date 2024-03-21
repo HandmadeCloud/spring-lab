@@ -12,7 +12,7 @@ public class A {
 		System.out.println(name + "unlock");
 	}
 
-	public static synchronized void print(String name) {
+	public synchronized void print(String name) {
 		System.out.println(name + "hi");
 	}
 }
