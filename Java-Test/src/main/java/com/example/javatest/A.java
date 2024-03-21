@@ -11,4 +11,8 @@ public class A {
 		}
 		System.out.println(name + "lock");
 	}
+
+	public void print(final String name) {
+		System.out.println("hi");
+	}
 }
