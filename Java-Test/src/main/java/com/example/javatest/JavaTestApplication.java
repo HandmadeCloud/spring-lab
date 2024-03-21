@@ -2,12 +2,24 @@ package com.example.javatest;
 
 public class JavaTestApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		A a1 = new A();
-		Thread thread1 = new Thread(() -> a1.run("thread1"));
-		Thread thread2 = new Thread(() -> a1.run("thread2"));
-		thread1.start();
-		thread2.start();
+		Thread[] threads = new Thread[5];
+		for (int i = 0; i < threads.length; i++) {
+			final int order = i;
+			threads[i] = new Thread(() -> {
+				a1.run("thread" + order);
+			});
+		}
+		threads[0].start();
+		Thread.sleep(100);
+		threads[1].start();
+		Thread.sleep(100);
+		threads[2].start();
+		Thread.sleep(100);
+		threads[3].start();
+		Thread.sleep(100);
+		threads[4].start();
+		// syncronized 스레드의 동기화 순서는 보장하지 않음
 	}
-	// block으로 필요한 부분만 lock을 거는 것도 가능하다.
 }
