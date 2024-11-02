@@ -22,7 +22,9 @@ import lombok.Getter;
 public class SpringLabJpaApplication {
 
 	public static void main(String[] args) {
-		new School.Student();
+		School.Student student = new School.Student();
+		student.getSchoolName();
+
 	}
 
 }
@@ -40,6 +42,10 @@ class School {
 		Student(){
 			System.out.println("School의 schoolName : " + schoolName);
 			System.out.println("School non-static 변수 : " + new School().isOpen);
+		}
+
+		public static String getSchoolName() {
+			return schoolName;
 		}
 	}
 
